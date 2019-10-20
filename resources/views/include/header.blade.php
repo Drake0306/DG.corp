@@ -17,11 +17,10 @@
                         <a class="nav-link" href="#">Live Climate Data</a>
                     </li>
                     <li class="nav-item">
-                        <select class="custom-select custom-select-lg bg-dark" data-placeholder="Not logged in" id="header_select" style="color:white;">
-                            <option selected>Not logged in</option>
-                            <option value="1" ><a href="">Login</a></option>
-                            <option value="2"><a href="">Regester</a></option>
-                        </select>
+                        <a href="" class="nav-link href="#">Login</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="" class="nav-link href="#">Regester</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto nav-flex-icons">
