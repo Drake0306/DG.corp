@@ -32,15 +32,15 @@
         }
 
         /* .view {
-            background: url("public/img/weather.jpg")no-repeat center center;
-            background-size: cover;
-        } */
+                background: url("public/img/weather.jpg")no-repeat center center;
+                background-size: cover;
+            } */
 
         html,
         body,
         header,
         .view {
-            height: 60%;
+            height: 40%;
         }
 
         #header_select {
@@ -72,29 +72,31 @@
             font-size: 40px;
         }
 
-        /* width */
+
         ::-webkit-scrollbar {
             width: 10px;
         }
 
-        /* Track */
+
         ::-webkit-scrollbar-track {
             background: #f1f1f1;
         }
 
-        /* Handle */
+
         ::-webkit-scrollbar-thumb {
             background: #888;
         }
 
-        /* Handle on hover */
+
         ::-webkit-scrollbar-thumb:hover {
-            background:
+            background: #555;
+        }
 
     </style>
 </head>
 
 <body>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -102,18 +104,18 @@
 
                 @include('include.header')
 
-                <!--Main Layout-->
-                <div class="container-fluid mt-3">
+
+                <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-4 ml-4">
-                            <h><span><i class="fas fa-globe-europe"></i></span> <span><i
-                                        class="far fa-map pl-5"></i></span></h3>
+                        <div class="col-md-4 ml-4" id="left_globe" style="display:none;">
+                            <h><span><i class="fas fa-globe-europe"></i></span> <span><i class="far fa-map "></i></span>
+                                </h3>
                         </div>
                         <div class="col-md-1">
 
                         </div>
-                        <div class="col-md-4" style="border-left:3px solid;">
-                            <div style="margin-left:40px;">
+                        <div class="col-md-4" style="border-left:3px solid;display:none;" id="view_div">
+                            <div style="margin-left:40px;display:none;" id="animate_div">
                                 <h5 class="mt-5"><strong>Ghatshila <span><i
                                                 class="fas fa-map-marked-alt pl-3"></i></span></strong></h5>
                                 <h5 class="mt-3"><strong>Jamshedpur - 35<sup> ℃</sup><i
@@ -127,25 +129,35 @@
                                             class="fas fa-cloud-showers-heavy pl-3"></i></strong></h5>
                             </div>
                         </div>
-                        <div class="col-md-2 mt-5 pt-5">
+                        <div class="col-md-2 mt-5 pt-5"id="cloud" style="display:none;">
                             <i class="fas fa-cloud"></i>
                         </div>
                     </div>
                 </div>
 
 
-                <!--Main Layout-->
+
             </div>
         </div>
 
     </div>
-    @include('include.footer')
-</body>
-<script>
-    // $("#header_select").click(function(){
-    //     $('#show_select').appendTo('#header_select').show('slow');
-    // });
 
-</script>
+    @include('include.footer')
+    <script>
+        $(document).ready(function () {
+
+            // left_globe
+            $("#cloud").fadeIn('2000');
+            $("#view_div").toggle('slow'); 
+            $("#animate_div").fadeIn('2000'); 
+            $("#left_globe").fadeIn('2000'); 
+             
+            
+
+
+        });
+
+    </script>
+</body>
 
 </html>

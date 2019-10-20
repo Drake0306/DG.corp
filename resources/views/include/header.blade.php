@@ -20,7 +20,7 @@
                         <a href="" class="nav-link href="#">Login</a>
                     </li>
                     <li class="nav-item"> 
-                        <a href="" class="nav-link href="#">Regester</a>
+                    <a  class="nav-link" href="{{url('/regester')}}">Regester</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto nav-flex-icons">

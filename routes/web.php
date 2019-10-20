@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+Route::get('/',('Controller@Welcome'));
+Route::get('/regester',('Controller@Regester'));
+Route::post('/regester/regester_account',('Controller@Regester_new_Account'));

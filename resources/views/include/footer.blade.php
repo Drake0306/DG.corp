@@ -1,7 +1,7 @@
 <style>
         #f1 {
             position: absolute;
-            bottom: 1px;
+            bottom: 0;
             width: 100%;
             background-color: rgba(196, 196, 196, 0.8);
             height: 100px;
@@ -21,10 +21,10 @@
                     <h5 class="mb-1">Register for free</h5>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#" class="btn btn-primary btn-rounded">Sign up!</a>
+                    <a href="{{url('/regester')}}" class="btn btn-primary btn-rounded">Sign up!</a>
                 </li>
                 <li>
-                    <div class="text-center mt-3" style="color:black;">© 2019 Copyright:
+                    <div class="text-center mt-2" style="color:black;">© 2019 Copyright:
                     </div>
                 </li>
             </ul>
