@@ -2,7 +2,7 @@
 <header>
 
         <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#" style="font-size:30px;"><strong>Web Satellite</strong></a>
+            <a class="navbar-brand" href="{{url('/')}}" style="font-size:30px;"  title="Web Satelite Home" ><strong>Web Satellite</strong></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -11,16 +11,16 @@
             <div class="collapse navbar-collapse ml-1" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" title="Home" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Live Climate Data</a>
+                        <a class="nav-link"  title="Live Time Climate Data" href="#">Live Climate Data</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link href="#">Login</a>
+                        <a href="" title="Login" class="nav-link href="#">Login</a>
                     </li>
                     <li class="nav-item"> 
-                    <a  class="nav-link" href="{{url('/regester')}}">Regester</a>
+                    <a  class="nav-link" title="Regester" href="{{url('/regester')}}">Regester</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto nav-flex-icons">

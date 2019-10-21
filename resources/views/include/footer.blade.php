@@ -21,7 +21,7 @@
                     <h5 class="mb-1">Register for free</h5>
                 </li>
                 <li class="list-inline-item">
-                    <a href="{{url('/regester')}}" class="btn btn-primary btn-rounded">Sign up!</a>
+                    <a href="{{url('/regester')}}" title="Signup" class="btn btn-primary btn-rounded">Sign up!</a>
                 </li>
                 <li>
                     <div class="text-center mt-2" style="color:black;">© 2019 Copyright:
