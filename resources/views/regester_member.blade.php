@@ -147,9 +147,9 @@
                                                                 <small id="helpId2" class="form-text text-muted ml-1" style="display:none;">Cannot be empty and should be in proper format</small>
 
 
-                                                            <input type="number" class="form-control mt-5" name="number"
+                                                            <input type="text" class="form-control mt-5" name="number"
                                                                 id="number" aria-describedby="helpId"
-                                                                placeholder="Number">
+                                                                placeholder="Number" maxlength="10">
                                                                 <small id="helpId3" class="form-text text-muted ml-1" style="display:none;">Cannot be empty</small>
 
 
@@ -237,6 +237,7 @@
         } else {
             $("#name").css("border-color", "grey");
             $("#helpId1").hide("fast");
+            check_name=true;
 
 
         }
@@ -260,11 +261,11 @@
             $("#email").css("border-color", "red");
             $("#helpId2").css("border-color", "red");
             $("#helpId2").show("fast");
-            check_email=true;
-            return false;
+            check_email=false;
         } else {
             $("#email").css("border-color", "grey");
             $("#helpId2").hide("fast");
+            check_email=true;
 
 
 
@@ -288,11 +289,11 @@
             $("#number").css("border-color", "red");
             $("#helpId3").css("border-color", "red");
             $("#helpId3").show("fast");
-            check_number=true;
+            check_number=false;
         } else {
             $("#number").css("border-color", "grey");
             $("#helpId3").hide("fast");
-
+            check_number=true;
 
 
         }
@@ -315,12 +316,14 @@
             $("#password").css("border-color", "red");
             $("#helpId4").css("border-color", "red");
             $("#helpId4").show("fast");
-            check_pssword=true;
+            check_pssword=false;
 
         } else {
             $("#password").css("border-color", "grey");
             check_pass = password;
             $("#helpId4").hide("fast");
+            check_pssword=true;
+
 
 
 
@@ -345,11 +348,13 @@
             $("#helpId5").css("border-color", "red");
             $("#helpId5").show("fast");
             $("#helpId6").hide("fast");
-            check_cnf_password=true;
+            check_cnf_password=false;
 
         } else if (cnf_password == check_pass) {
             $("#cnf_password").css("border-color", "grey");
             $("#helpId5").hide("fast");
+            $("#helpId6").hide("fast");
+            check_cnf_password=true;
 
 
 
@@ -358,10 +363,13 @@
             $("#helpId6").css("border-color", "red");
             $("#helpId6").show("fast");
             $("#helpId5").hide("fast");
-            check_cnf_password=true;
+            check_cnf_password=false;
         }
 
-        $("#submit").click(function(){
+    }
+
+    $("#submit").click(function(){
+            
             name();
             password();
             email();
@@ -376,7 +384,6 @@
                 return false;
             }
         });
-    }
 
 </script>
 </body>
